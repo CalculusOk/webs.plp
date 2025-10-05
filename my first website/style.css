@@ -1,0 +1,155 @@
+/* ===== GENERAL STYLING ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #0077b6;
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10%;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: #ffd60a;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.btn {
+  background: #ffd60a;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffc300;
+}
+
+/* ===== ABOUT PAGE ===== */
+.about {
+  padding: 50px 10%;
+  text-align: center;
+}
+
+.skills {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.skill {
+  margin: 15px 0;
+}
+
+.bar {
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 10px;
+  width: var(--width);
+  background: #0077b6;
+  animation: fillBar 2s ease forwards;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--width); }
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact {
+  padding: 50px 10%;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+#formMsg {
+  text-align: center;
+  margin-top: 10px;
+  color: green;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  background: #0077b6;
+  color: white;
+  padding: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+}
